@@ -1,6 +1,6 @@
-﻿namespace ClienteExibição
+﻿namespace ClienteCarregamento
 {
-    partial class Form1
+    partial class Inicio
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.CarrgarArquivo = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // CarrgarArquivo
+            // 
+            this.CarrgarArquivo.Location = new System.Drawing.Point(81, 63);
+            this.CarrgarArquivo.Name = "CarrgarArquivo";
+            this.CarrgarArquivo.Size = new System.Drawing.Size(75, 23);
+            this.CarrgarArquivo.TabIndex = 0;
+            this.CarrgarArquivo.Text = "button1";
+            this.CarrgarArquivo.UseVisualStyleBackColor = true;
+            this.CarrgarArquivo.Click += new System.EventHandler(this.CarrgarArquivo_Click);
+            // 
+            // Inicio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(297, 160);
+            this.Controls.Add(this.CarrgarArquivo);
+            this.Name = "Inicio";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button CarrgarArquivo;
     }
 }
 

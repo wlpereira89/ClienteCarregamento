@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.BtnCarregarArquivo = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // BtnCarregarArquivo
+            // 
+            this.BtnCarregarArquivo.Location = new System.Drawing.Point(122, 50);
+            this.BtnCarregarArquivo.Name = "BtnCarregarArquivo";
+            this.BtnCarregarArquivo.Size = new System.Drawing.Size(70, 51);
+            this.BtnCarregarArquivo.TabIndex = 0;
+            this.BtnCarregarArquivo.Text = "Carregar Arquivo";
+            this.BtnCarregarArquivo.UseVisualStyleBackColor = true;
+            this.BtnCarregarArquivo.Click += new System.EventHandler(this.BtnCarregarArquivo_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(325, 169);
+            this.Controls.Add(this.BtnCarregarArquivo);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button BtnCarregarArquivo;
     }
 }
 
