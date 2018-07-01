@@ -1,6 +1,6 @@
 ﻿namespace ClienteCarregamento
 {
-    partial class Form1
+    partial class Entrada
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -39,16 +39,16 @@
             this.BtnCarregarArquivo.TabIndex = 0;
             this.BtnCarregarArquivo.Text = "Carregar Arquivo";
             this.BtnCarregarArquivo.UseVisualStyleBackColor = true;
-            this.BtnCarregarArquivo.Click += new System.EventHandler(this.BtnCarregarArquivo_Click);
+            this.BtnCarregarArquivo.Click += new System.EventHandler(this.BtnCarregarArquivo_ClickAsync);
             // 
-            // Form1
+            // Entrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 169);
             this.Controls.Add(this.BtnCarregarArquivo);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Entrada";
+            this.Text = "Entrada";
             this.ResumeLayout(false);
 
         }
