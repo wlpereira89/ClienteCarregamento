@@ -33,11 +33,12 @@
             // 
             // BtnCarregarArquivo
             // 
-            this.BtnCarregarArquivo.Location = new System.Drawing.Point(122, 50);
+            this.BtnCarregarArquivo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnCarregarArquivo.Location = new System.Drawing.Point(0, 16);
             this.BtnCarregarArquivo.Name = "BtnCarregarArquivo";
-            this.BtnCarregarArquivo.Size = new System.Drawing.Size(70, 51);
+            this.BtnCarregarArquivo.Size = new System.Drawing.Size(176, 69);
             this.BtnCarregarArquivo.TabIndex = 0;
-            this.BtnCarregarArquivo.Text = "Carregar Arquivo";
+            this.BtnCarregarArquivo.Text = "Fazer Novo\r\nUpload\r\nSinal";
             this.BtnCarregarArquivo.UseVisualStyleBackColor = true;
             this.BtnCarregarArquivo.Click += new System.EventHandler(this.BtnCarregarArquivo_ClickAsync);
             // 
@@ -45,7 +46,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 169);
+            this.ClientSize = new System.Drawing.Size(176, 85);
             this.Controls.Add(this.BtnCarregarArquivo);
             this.Name = "Entrada";
             this.Text = "Entrada";

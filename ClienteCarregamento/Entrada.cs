@@ -23,6 +23,7 @@ namespace ClienteCarregamento
 
         private async void BtnCarregarArquivo_ClickAsync(object sender, EventArgs e)
         {
+            BtnCarregarArquivo.Enabled = false;
             OpenFileDialog dialogo = new OpenFileDialog();
             dialogo.Title = "Procurar arquivos";
             dialogo.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
@@ -35,8 +36,8 @@ namespace ClienteCarregamento
                 try
                 {
                     string[] partes = fileName.Split('1');
-                    PresenterCore.pastaEnvio = fileName.Split('\\').Last().Split('0')[0].Split('.')[0] + '_' + DateTime.Now.ToShortDateString().Replace('/', '-');
-                    FileStream fileStream = System.IO.File.OpenRead(fileName);
+                    PresenterCore.pastaEnvio = fileName.Split('\\').Last().Split('0')[0].Split('.')[0] + '_' + DateTime.Now.ToString().Replace(':', '-').Replace('/', '-');
+                    FileStream fileStream = File.OpenRead(fileName);
                     for (int i = 2; i > 0; i++)
                     {
                         using (HttpClient client = new HttpClient())
@@ -68,26 +69,26 @@ namespace ClienteCarregamento
                             }
                             fileName = partes[0] + i + partes[1];
                             if (File.Exists(fileName))
-                                fileStream = System.IO.File.OpenRead(fileName);
+                                fileStream = File.OpenRead(fileName);
                             else
                                 i = -100;
                         }
                         
                     }
+                    Confirma _f = new Confirma();
+                    _f.Show();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-                }
-                Confirma _f = new Confirma();
-                _f.Show();
+                }   
+                
             }
             else
             {
                 MessageBox.Show("Nenhum arquivo carregado");
             }
-            
-            
+            BtnCarregarArquivo.Enabled = true;
         }
     }
 }
