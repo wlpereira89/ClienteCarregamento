@@ -22,7 +22,7 @@ namespace ClienteCarregamento
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    var task = client.GetAsync("http://localhost:52370/api/recepcao/arquivo/" + PresenterCore.pastaEnvio + "/" + EditFZero.Value + "/" + EditIteracoes.Value);
+                    var task = client.GetAsync("http://localhost:52370/api/recepcao/arquivo/" + PresenterCore.pastaEnvio + "/" + EditLinhas.Value + "/" + EditColunas.Value + "/" + EditGanho.Value + "/" + EditIteracoes.Value);
                     BtnOk.Enabled = false;
                     label1.Text = "Aguarde...";
                     task.Wait();
